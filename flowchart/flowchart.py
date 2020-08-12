@@ -15,6 +15,8 @@ def yesItMoves():
     elif answerYesMoves.strip().upper() == "Q":
         exit()
     else:
+        print('\n')
+        print('fat fingers or just incorrect input. type "yes" "no" or "q" to quit')
         yesItMoves()
 
 def noNotMoves():
@@ -26,6 +28,8 @@ def noNotMoves():
     elif answerNotMoves.strip().upper() == "Q":
         exit()
     else:
+        print('\n')
+        print('fat fingers or just incorrect input. type "yes" "no" or "q" to quit')
         noNotMoves()
 
 def askFirstQuestion():
@@ -37,6 +41,8 @@ def askFirstQuestion():
     elif answer1.strip().upper() == "Q":
         exit()
     else:
+        print('\n')
+        print('fat fingers or just incorrect input. type "yes" "no" or "q" to quit')
         askFirstQuestion()
 
 def beginFlowChart():
