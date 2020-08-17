@@ -64,6 +64,10 @@ rooms = {
             'Backyard' : {
                 'east' : 'Garage',
                 'west' : 'Neighbor House'
+            },
+            'Garage' : {
+                'west': 'Backyard',
+                'route': 'motorcycle'
             }
          }
 
@@ -120,11 +124,17 @@ while True:
 
     if move[0] == 'use':
         if "route" in rooms[currentRoom] and move[1] in inventory:
-            print("you rappel off the roof via the fire espace and land in the backyard")
+            if currentRoom == 'Roof':
+                print("you rappel off the roof via the fire espace and land in the backyard")
+            if currentRoom == 'Garage':
+                print("skkkrrrrttttt - we out! success!")
+                break
+            inventory.remove(move[1])
             currentRoom = 'Backyard'
 
     if currentRoom == 'Roof':
-        print("You see a broken escape ladder and cant climb down, maybe you can 'use' and item?")
+        print("You see a broken escape ladder and cant climb down, maybe you can 'use' an item?")
+
 
 ## Define how a player can w
     if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
